@@ -65,8 +65,21 @@
     width: 100%;
 }
 
+.mark {
+    background: #000;
+    padding: 2px 30px;
+}
+
+marquee {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 10px 5px;
+    font-weight: 100;
+}
+
 nav{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -373,7 +386,7 @@ button{
 
 /* home banner */
 .home-section {
-    margin-top: 110px;
+    margin:80px 0px;
 }
 
 .home-section .homr-slider {
@@ -878,6 +891,92 @@ button{
     width: 0;
 }
 
+.footer {
+    background: #111;
+}
+.footer .footer-content {
+    padding: 60px 0;
+    display: flex;
+}
+.footer .footer-content .box {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    max-width: 181px;
+}
+
+.footer-logo a {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 45px;
+}
+
+.footer-logo h4 {
+    font-family: 'Satisfy';
+    color: #000;
+    padding: 0px 22px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer .footer-content .box .social-icon {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.footer .footer-content .box .social-icon ion-icon {
+    color: #fff;
+    font-size: 30px;
+}
+.footer .footer-content .box .box-item .title {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 400;
+    display: block;
+}
+.footer .footer-content .box .box-item ul {
+    list-style: none;
+    color: #fff;
+}
+.footer .footer-content .box .box-item ul li {
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+}
+.footer .footer-content .box .box-item ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    color: #D6D6D6;
+    position: relative;
+}
+.footer .footer-content .box .box-item ul li a::after {
+    display: block;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    content: "";
+    transition: transform .6s cubic-bezier(.28, .75, .22, .95);
+    transform: scaleX(0);
+    transform-origin: right center;
+}
+.footer .footer-content .box .box-item ul li a:hover::after {
+    transform: scale(1);
+    transform-origin: left center;
+}
 
 
 /* Responvice */
@@ -995,7 +1094,9 @@ button{
         height: auto;
         padding-top: 70px;
     }
-
+    .profile .swiper-slide {
+        height: 430px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1125,7 +1226,11 @@ button{
     .explore-prduoucts-section .contant-2{
         max-width: 100%;
     }
-
+    .footer .footer-content {
+        padding: 60px 0;
+        display: block;
+    }
+  
 }
 
 @media (max-width:850px) {
@@ -1206,6 +1311,7 @@ button{
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 30px 0;
     }
 
 
@@ -1235,6 +1341,18 @@ button{
         border-radius: none;
         color: #ffff;
     }
+    /* .footer-logo  {
+        max-width: 140px;
+    }
+    .footer-logo img {
+        max-width: 35px;
+    }
+    
+.footer-logo h4 {
+    padding: 0px 12px;
+    font-size: 12px;
+    font-weight: 500;
+} */
 }
 
 
