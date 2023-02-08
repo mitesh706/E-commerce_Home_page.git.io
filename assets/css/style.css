@@ -141,6 +141,24 @@ nav{
     font-size: 13px;
     font-weight: 500;
   }
+  nav .navbar .links li a::before{
+    display: block;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    content: "";
+    transition: transform .6s cubic-bezier(.28,.75,.22,.95);
+    transform: scaleX(0);
+    transform-origin: right center;
+    border-color: #000000;
+}
+nav .navbar .links li:hover a::before{
+    transform: scale(1);
+    transform-origin: left center;
+}
+
   .links li:hover .htmlcss-arrow,
   .links li:hover .js-arrow{
     transform: rotate(180deg);
@@ -401,7 +419,7 @@ button{
     margin: 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) !important;
     color: #fff;
     width: 28px;
     height: 28px;
